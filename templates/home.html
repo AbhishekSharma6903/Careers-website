@@ -13,13 +13,22 @@
  
 </head>
 <body>
+  {% include 'nav.html' %}
   <div class="container">
+  <img class='img-fluid' id='banner'  src="https://careers-website.gamingfuture.repl.co/static/banner.jpg" width="1280" height="380">
  
-  <h1 >New Careers</h1>
-  <img class='img-fluid' id='banner'  src="https://careers-website.gamingfuture.repl.co/static/banner.jpg" width="980" height="480">
-  <h2>About Careers</h2>
-  <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  <h1 style='text-align:center'>New Careers</h1>
+  <h2 >About Careers</h2>
+    <div class='row' style="margin-bottom:16px">
+      <div class='col-6'>
+        <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
   </p>
+      </div>
+      <div class='col-6'>
+      <img src='/static/people.jpg' style='height:320px; border-radius:6px; margin-bottom:16px'
+      </div>
+    </div>
+  
   <h2 style= 'text-align: center;'>Job Openings</h2>
   <div >
     {% for job in jobs %}  
@@ -28,6 +37,7 @@
   </div>  
   <div class='text-center'>
   <button class="btn btn-primary mb-4">Contact Us</button>
+    {% include 'footer.html' %}
   </div>
   
 </body>
